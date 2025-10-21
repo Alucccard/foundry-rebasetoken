@@ -1,3 +1,14 @@
+# This is a Cross-chain Rebase Token project
+## 1. Allows users to deposit into a vault and in return, receiver rebase tokens that represent their underlying balance.
+## 2. Rebase token => balance of function is dynamic to show the changing balance with time.
+    - Balance increases with time linearly.
+    - mint tokens to our users every time when minting, burning, transferring, bridging.
+## 3. Interest rate
+    - Indivually set an interest rate for each user based on global interest rate.
+    - The global interest rate can only decrease to incetivise/reward early adopters.
+    - 
+
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
