@@ -1,5 +1,7 @@
 # This is a Cross-chain Rebase Token project
 ## 1. Allows users to deposit into a vault and in return, receiver rebase tokens that represent their underlying balance.
+    - user doposit ETH and receive rebase token, it will accumulate interest
+    - the amount of rebase token represents the value user deposit into the vault
 ## 2. Rebase token => balance of function is dynamic to show the changing balance with time.
     - Balance increases with time linearly.
     - mint tokens to our users every time when minting, burning, transferring, bridging.
