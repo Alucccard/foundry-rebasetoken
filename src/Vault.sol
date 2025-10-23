@@ -41,8 +41,9 @@ contract Vault {
 
     ////////*errors*//////////
     error Vault_RedeemFailed();
-   IRebaseToken private immutable i_rebaseToken;
-   
+
+    IRebaseToken private immutable i_rebaseToken;
+
     /////////*events*//////////
     event Redeem(address indexed user, uint256 amount);
     event Deposit(address indexed user, uint256 amount);
@@ -63,18 +64,21 @@ contract Vault {
     }
 
     function redeem(uint256 _amount) external {
+        if (_amount == type(uint256).max) {
+            _amount = i_rebaseToken.balanceOf(msg.sender);
+        }
+
         //burn rebase tokens from the user
         i_rebaseToken.burn(msg.sender, _amount);
         //send ether back to the user
         //msg.sender call method to receive ether from the contract
         //{value: _amount} to specify the amount of ether to send
-        (bool success, ) = payable(msg.sender).call{value: _amount}("");
-        if(!success){
+        (bool success,) = payable(msg.sender).call{value: _amount}("");
+        if (!success) {
             revert Vault_RedeemFailed();
         }
         emit Redeem(msg.sender, _amount);
     }
-
 
     function getRebaseTokenAddress() external view returns (address) {
         return address(i_rebaseToken);
