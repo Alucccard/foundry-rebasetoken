@@ -81,12 +81,12 @@ contract RebaseToken is ERC20, Ownable, AccessControl {
         emit InterestRateSetted(_newRate);
     }
 
-    function mint(address _to, uint256 _amount) external onlyRole(MINT_AND_BURN_ROLE) {
+    function mint(address _to, uint256 _amount, uint256 _userInterestRate) external onlyRole(MINT_AND_BURN_ROLE) {
         // Update the user's accrued interest before minting new tokens,giveing them their due interest
         _mintAccruedInterest(_to);
         // Set the user's interest rate to the current interest rate at the time of minting
         //timestamp is also updated in _mintAccruedInterest
-        s_userInterestRate[_to] = s_interestRate; //the unit of it to caculate interest is by second
+        s_userInterestRate[_to] = _userInterestRate; //the unit of it to caculate interest is by second
         _mint(_to, _amount);
     }
 
