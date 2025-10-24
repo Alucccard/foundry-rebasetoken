@@ -1,0 +1,171 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "solidity.telemetry": true,
+  "editor.fontVariations": false,
+  "editor.fontWeight": "normal",
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    }
+  },
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "makefile.configureOnOpen": false,
+  "editor.minimap.size": "fill",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggest.insertMode": "replace"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggest.insertMode": "replace"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  // "solidity.compileUsingRemoteVersion": "v0.8.17"
+  // 启用 ESLint
+  "eslint.enable": true,
+  // 设置 ESLint 检查的文件类型
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // 启用行内错误显示
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  // 设置诊断信息的显示方式
+  "problems.decorations.enabled": true,
+  // 在编辑器中显示错误波浪线
+  "editor.renderValidationDecorations": "on",
+  // 设置错误信息显示位置（行内）
+  "editor.hover.enabled": true,
+  "editor.hover.delay": 300,
+
+  "vim.handleKeys": {
+    "<C-c>": false, // 保留 Ctrl+C
+    "<C-v>": false, // 保留 Ctrl+V
+    "<C-x>": false, // 保留 Ctrl+X
+    "<C-z>": false, // 保留 Ctrl+Z
+    "<C-y>": false, // 保留 Ctrl+Y
+    "<C-a>": false, // 保留 Ctrl+A（全选）
+    "<C-f>": false, // 保留 Ctrl+F（查找）
+    "<C-h>": false, // 保留 Ctrl+H（替换）
+    "<C-n>": false, // 保留 Ctrl+N（新文件）
+    "<C-o>": false, // 保留 Ctrl+O（打开文件）
+    "<C-s>": false, // 保留 Ctrl+S（保存）
+    "<C-w>": false, // 保留 Ctrl+W（关闭标签）
+    "<C-p>": false // 保留 Ctrl+P（快速打开文件）
+  },
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["k", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["9"],
+      "after": ["0"]
+    },
+    {
+      "before": ["0"],
+      "after": ["$"]
+    },
+    {
+      "before": ["]"],
+      "after": ["{"]
+    },
+    {
+      "before": ["["],
+      "after": ["}"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["9"],
+      "after": ["0"]
+    },
+    {
+      "before": ["0"],
+      "after": ["$"]
+    },
+    {
+      "before": ["]"],
+      "after": ["{"]
+    },
+    {
+      "before": ["["],
+      "after": ["}"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    {
+      "before": ["9"],
+      "after": ["0"]
+    },
+    {
+      "before": ["0"],
+      "after": ["$"]
+    },
+    {
+      "before": ["]"],
+      "after": ["{"]
+    },
+    {
+      "before": ["["],
+      "after": ["}"]
+    }
+  ],
+  "solidity-language-server.trace.server.verbosity": "message",
+  "prettier.bracketSameLine": true,
+  "solidity.formatter": "forge",
+}
